@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://b5bkwvo3228fi"]
 
 [ext_resource type="Script" path="res://script/transition.gd" id="1_8q0nc"]
-[ext_resource type="Texture2D" uid="uid://c3ivc2hajhjt3" path="res://img/Seb_health.png" id="2_i5hv0"]
 [ext_resource type="Texture2D" uid="uid://dsj5ktxcm65ur" path="res://img/Seb_transi_GOOD_1.png" id="3_nl1ef"]
 [ext_resource type="Texture2D" uid="uid://dqygtihhbm2kq" path="res://img/Seb_transi_GOOD_2.png" id="4_lld2i"]
 [ext_resource type="Texture2D" uid="uid://bvimqplynxsvc" path="res://img/Seb_transi_SAD_1.png" id="5_y0xy0"]
 [ext_resource type="Texture2D" uid="uid://8td872o5wrl1" path="res://img/Seb_transi_SAD_2.png" id="6_8ih4u"]
+[ext_resource type="SpriteFrames" uid="uid://btk2caxv01d8u" path="res://texture/coeur.tres" id="7_u1dkp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ws0nl"]
 animations = [{
@@ -56,25 +56,6 @@ offset_bottom = 330.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "NUMBER"
 
-[node name="loading" type="ProgressBar" parent="Control"]
-z_index = 1
-layout_mode = 0
-offset_left = 107.0
-offset_top = 599.0
-offset_right = 1212.0
-offset_bottom = 663.0
-
-[node name="HP" type="TextureProgressBar" parent="Control"]
-z_index = 1
-layout_mode = 0
-offset_left = 207.0
-offset_top = 477.0
-offset_right = 1107.0
-offset_bottom = 577.0
-max_value = 4.0
-value = 4.0
-texture_progress = ExtResource("2_i5hv0")
-
 [node name="transiAnim" type="AnimatedSprite2D" parent="Control"]
 position = Vector2(640.5, 361)
 scale = Vector2(0.666146, 0.664815)
@@ -82,3 +63,39 @@ sprite_frames = SubResource("SpriteFrames_ws0nl")
 animation = &"Good"
 autoplay = "Good"
 speed_scale = 0.4
+
+[node name="C1" type="AnimatedSprite2D" parent="Control"]
+visible = false
+position = Vector2(416, 644)
+sprite_frames = ExtResource("7_u1dkp")
+animation = &"coeur"
+autoplay = "coeur"
+frame_progress = 0.53032
+speed_scale = 0.4
+
+[node name="C2" type="AnimatedSprite2D" parent="Control"]
+visible = false
+position = Vector2(571, 644)
+sprite_frames = ExtResource("7_u1dkp")
+animation = &"coeur"
+autoplay = "coeur"
+
+[node name="C3" type="AnimatedSprite2D" parent="Control"]
+visible = false
+position = Vector2(745, 644)
+sprite_frames = ExtResource("7_u1dkp")
+animation = &"coeur"
+autoplay = "coeur"
+
+[node name="C4" type="AnimatedSprite2D" parent="Control"]
+visible = false
+position = Vector2(896, 644)
+sprite_frames = ExtResource("7_u1dkp")
+animation = &"coeur"
+autoplay = "coeur"
+
+[node name="Timer" type="Timer" parent="Control"]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Control/Timer" to="." method="_on_timer_timeout"]
