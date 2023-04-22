@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://6gyq7q5ldn55"]
+[gd_scene load_steps=14 format=3 uid="uid://6gyq7q5ldn55"]
 
 [ext_resource type="Script" path="res://script/Temperature_douche.gd" id="1_8jtx4"]
 [ext_resource type="Texture2D" uid="uid://b5ircyff4e53x" path="res://texture/Seb_life_down.png" id="2_wkob3"]
@@ -9,6 +9,28 @@
 [ext_resource type="Texture2D" uid="uid://cotnmcees4wti" path="res://texture/Seb_douche.png" id="6_j76yf"]
 [ext_resource type="Texture2D" uid="uid://df5dxuppisey" path="res://texture/Seb_time.png" id="6_nduu2"]
 [ext_resource type="Texture2D" uid="uid://bfjjrweca8snk" path="res://texture/Seb_douche_up.png" id="6_peh1o"]
+[ext_resource type="Texture2D" uid="uid://dhbtlwh1klpnf" path="res://img/Seb_laver_good_1.png" id="10_ivkyw"]
+[ext_resource type="Texture2D" uid="uid://cqbkevpmofudd" path="res://img/Seb_laver_good_2.png" id="11_rcw3r"]
+[ext_resource type="Script" path="res://scene/laverAnim.gd" id="12_1d2nj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ga6mv"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("10_ivkyw")
+}, {
+"duration": 2.0,
+"texture": ExtResource("11_rcw3r")
+}],
+"loop": true,
+"name": &"douche_good",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D"]
 
@@ -20,6 +42,7 @@ offset_bottom = 40.0
 script = ExtResource("1_8jtx4")
 
 [node name="HP" type="TextureProgressBar" parent="Control"]
+z_index = 1
 layout_mode = 0
 offset_left = 836.0
 offset_top = 26.0
@@ -31,6 +54,7 @@ texture_over = ExtResource("3_ryun5")
 texture_progress = ExtResource("4_5dwvj")
 
 [node name="Time" type="TextureProgressBar" parent="Control"]
+z_index = 1
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -42,6 +66,7 @@ texture_over = ExtResource("5_i1db4")
 texture_progress = ExtResource("6_nduu2")
 
 [node name="TDouche" type="TextureProgressBar" parent="Control"]
+z_index = 1
 layout_mode = 0
 offset_left = 125.0
 offset_top = 524.0
@@ -55,5 +80,14 @@ texture_progress = ExtResource("6_j76yf")
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.05
 autostart = true
+
+[node name="laver" type="AnimatedSprite2D" parent="."]
+position = Vector2(639, 359)
+sprite_frames = SubResource("SpriteFrames_ga6mv")
+animation = &"douche_good"
+autoplay = "douche_good"
+frame = 1
+frame_progress = 0.564023
+script = ExtResource("12_1d2nj")
 
 [connection signal="timeout" from="Timer" to="Control" method="_on_timer_timeout"]
