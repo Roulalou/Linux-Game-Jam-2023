@@ -8,8 +8,15 @@ var global_vars = get_node("/root/Global")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$Control/transiAnim.speed_scale = 0.4 + (global_vars.level * 0.2)
+	
 	$Control/Number.text = str(global_vars.level)
 	$Control/HP.value = global_vars.hp
+	if global_vars.lost == true:
+		$Control/transiAnim.animation = "sad"
+		global_vars.lost = false
+	else : 
+		$Control/transiAnim.animation = "Good"
 	
 
 

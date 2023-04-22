@@ -29,6 +29,7 @@ func _on_timer_timeout():
 		$HP.value -= 3
 		if $HP.value <= 0:
 			global_vars.hp -= 1
+			global_vars.lost = true
 			get_tree().change_scene_to_file("res://scene/transition.tscn")
 	
 	elif $TDouche.value >800:
@@ -37,6 +38,7 @@ func _on_timer_timeout():
 		$HP.value -= 3
 		if $HP.value <= 0:
 			global_vars.hp -= 1
+			global_vars.lost = true
 			get_tree().change_scene_to_file("res://scene/transition.tscn")
 	else:
 		$SebLaverFroid.visible = false
