@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://botent1i1kpvo"]
+
+[sub_resource type="Animation" id="Animation_7lfkf"]
+resource_name = "fade out"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gjg75"]
+_data = {
+"fade out": SubResource("Animation_7lfkf")
+}
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_gjg75")
+}

@@ -1,3 +1,75 @@
-[gd_scene format=3 uid="uid://b5bkwvo3228fi"]
+[gd_scene load_steps=7 format=3 uid="uid://b5bkwvo3228fi"]
+
+[ext_resource type="Script" path="res://script/transition.gd" id="1_8q0nc"]
+[ext_resource type="Texture2D" uid="uid://c3ivc2hajhjt3" path="res://img/Seb_health.png" id="2_i5hv0"]
+[ext_resource type="Texture2D" uid="uid://dsj5ktxcm65ur" path="res://img/Seb_transi_GOOD_1.png" id="3_nl1ef"]
+[ext_resource type="Texture2D" uid="uid://dqygtihhbm2kq" path="res://img/Seb_transi_GOOD_2.png" id="4_lld2i"]
+[ext_resource type="Script" path="res://script/transiAnim.gd" id="5_eb6pj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ws0nl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_nl1ef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_lld2i")
+}],
+"loop": true,
+"name": &"Good",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_8q0nc")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Number" type="RichTextLabel" parent="Control"]
+z_index = 1
+layout_mode = 2
+offset_left = 496.0
+offset_top = 51.0
+offset_right = 883.0
+offset_bottom = 330.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "NUMBER"
+
+[node name="loading" type="ProgressBar" parent="Control"]
+z_index = 1
+layout_mode = 0
+offset_left = 107.0
+offset_top = 599.0
+offset_right = 1212.0
+offset_bottom = 663.0
+
+[node name="HP" type="TextureProgressBar" parent="Control"]
+z_index = 1
+layout_mode = 0
+offset_left = 207.0
+offset_top = 477.0
+offset_right = 1107.0
+offset_bottom = 577.0
+max_value = 4.0
+value = 4.0
+texture_progress = ExtResource("2_i5hv0")
+
+[node name="transiAnim" type="AnimatedSprite2D" parent="Control"]
+position = Vector2(640.5, 361)
+scale = Vector2(0.666146, 0.664815)
+sprite_frames = SubResource("SpriteFrames_ws0nl")
+animation = &"Good"
+autoplay = "Good"
+frame = 1
+frame_progress = 0.710941
+speed_scale = 0.5
+script = ExtResource("5_eb6pj")
