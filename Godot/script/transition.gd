@@ -17,4 +17,17 @@ func _ready():
 func _process(delta):
 	$Control/loading.value += 1 # * delta
 	if $Control/loading.value >= 100:
-		get_tree().change_scene_to_file("res://scene/douche.tscn")
+		if global_vars.game == "douche":
+			get_tree().change_scene_to_file("res://scene/douche.tscn")
+		elif global_vars.game == "bouquet":
+			get_tree().change_scene_to_file("res://scene/bouquet.tscn")
+		elif global_vars.game == "trolley":
+			get_tree().change_scene_to_file("res://scene/trolley_level.tscn")
+		else:
+			var next = randi() % 3
+			if next == 0: 
+				get_tree().change_scene_to_file("res://scene/douche.tscn")
+			if next == 1:
+				get_tree().change_scene_to_file("res://scene/bouquet.tscn")
+			if next == 2:
+				get_tree().change_scene_to_file("res://scene/trolley_level.tscn")
