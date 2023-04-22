@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://djto8nh23sb0n"]
+
+[ext_resource type="Script" path="res://script/trolley.gd" id="1_ej3ab"]
+[ext_resource type="Texture2D" uid="uid://bjxubn6x37mil" path="res://spr_train_0.png" id="2_nhkb7"]
+
+[sub_resource type="TileSet" id="TileSet_1wxmq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ckr40"]
+size = Vector2(283, 142)
+
+[node name="TrolleyLevel" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_1wxmq")
+format = 2
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+motion_mode = 1
+script = ExtResource("1_ej3ab")
+m_speed = 200.0
+
+[node name="TrolleyCollisionShape" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(1.5, -20)
+shape = SubResource("RectangleShape2D_ckr40")
+
+[node name="Trolley" type="Sprite2D" parent="CharacterBody2D"]
+z_index = 1
+texture = ExtResource("2_nhkb7")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(-1, 0)
