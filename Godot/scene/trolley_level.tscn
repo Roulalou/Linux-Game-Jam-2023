@@ -1,13 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://djto8nh23sb0n"]
+[gd_scene load_steps=6 format=3 uid="uid://djto8nh23sb0n"]
 
 [ext_resource type="Script" path="res://script/trolley.gd" id="1_ej3ab"]
-[ext_resource type="Texture2D" uid="uid://cw85on3gjfpu7" path="res://Assets/Textures/Toon Road Texture.png" id="1_xueax"]
 [ext_resource type="Texture2D" uid="uid://bjxubn6x37mil" path="res://spr_train_0.png" id="2_nhkb7"]
+[ext_resource type="Texture2D" uid="uid://4ehb8rq07t8d" path="res://Assets/Textures/road_plain.png" id="2_uxbrl"]
+[ext_resource type="Texture2D" uid="uid://dipe760itki7u" path="res://Assets/Textures/Rail_edited.png" id="4_u5hcu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ckr40"]
 size = Vector2(283, 142)
 
 [node name="TrolleyLevel" type="Node2D"]
+
+[node name="Rail_Mid" type="Sprite2D" parent="."]
+z_index = 1
+texture_repeat = 2
+skew = 0.0872664
+texture = ExtResource("4_u5hcu")
+region_enabled = true
+region_rect = Rect2(0, 0, 1.96e+06, 366)
+
+[node name="Asphalt" type="Sprite2D" parent="."]
+texture_repeat = 2
+skew = 0.0872665
+texture = ExtResource("2_uxbrl")
+region_enabled = true
+region_rect = Rect2(0, 0, 3.2e+06, 32000)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 motion_mode = 1
@@ -19,15 +35,9 @@ position = Vector2(1.5, -20)
 shape = SubResource("RectangleShape2D_ckr40")
 
 [node name="Trolley" type="Sprite2D" parent="CharacterBody2D"]
-z_index = 1
+z_index = 2
 texture = ExtResource("2_nhkb7")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(-1, 0)
-
-[node name="ToonRoadTexture2" type="Sprite2D" parent="."]
-position = Vector2(2048, 0)
-texture = ExtResource("1_xueax")
-
-[node name="ToonRoadTexture" type="Sprite2D" parent="."]
-texture = ExtResource("1_xueax")
+zoom = Vector2(1.5, 1.5)
