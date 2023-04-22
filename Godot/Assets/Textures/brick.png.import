@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5u1toc5g5mkr"
-path="res://.godot/imported/herbe1.png-2f778488ddcb861e198e7abd94ca46dd.ctex"
+uid="uid://dx5r8k5hl1jom"
+path="res://.godot/imported/brick.png-ab82af2adf3ae9851ab097646cc336b8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/herbe1.png"
-dest_files=["res://.godot/imported/herbe1.png-2f778488ddcb861e198e7abd94ca46dd.ctex"]
+source_file="res://Assets/Textures/brick.png"
+dest_files=["res://.godot/imported/brick.png-ab82af2adf3ae9851ab097646cc336b8.ctex"]
 
 [params]
 

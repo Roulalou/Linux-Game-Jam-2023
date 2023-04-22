@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5u1toc5g5mkr"
-path="res://.godot/imported/herbe1.png-2f778488ddcb861e198e7abd94ca46dd.ctex"
+uid="uid://4ehb8rq07t8d"
+path="res://.godot/imported/road_plain.png-d8f33759270be70c9b4450cdc65f219b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/herbe1.png"
-dest_files=["res://.godot/imported/herbe1.png-2f778488ddcb861e198e7abd94ca46dd.ctex"]
+source_file="res://Assets/Textures/road_plain.png"
+dest_files=["res://.godot/imported/road_plain.png-d8f33759270be70c9b4450cdc65f219b.ctex"]
 
 [params]
 

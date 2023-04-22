@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5u1toc5g5mkr"
-path="res://.godot/imported/herbe1.png-2f778488ddcb861e198e7abd94ca46dd.ctex"
+uid="uid://dipe760itki7u"
+path="res://.godot/imported/Rail_edited.png-07dfaeecbb5edaa5c87894b506ffd218.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/herbe1.png"
-dest_files=["res://.godot/imported/herbe1.png-2f778488ddcb861e198e7abd94ca46dd.ctex"]
+source_file="res://Assets/Textures/Rail_edited.png"
+dest_files=["res://.godot/imported/Rail_edited.png-07dfaeecbb5edaa5c87894b506ffd218.ctex"]
 
 [params]
 

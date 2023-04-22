@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5u1toc5g5mkr"
-path="res://.godot/imported/herbe1.png-2f778488ddcb861e198e7abd94ca46dd.ctex"
+uid="uid://cyf1yl81ekqrk"
+path="res://.godot/imported/couple1.png-84b97139602f2905f69b470c13eb64b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/herbe1.png"
-dest_files=["res://.godot/imported/herbe1.png-2f778488ddcb861e198e7abd94ca46dd.ctex"]
+source_file="res://img/couple1.png"
+dest_files=["res://.godot/imported/couple1.png-84b97139602f2905f69b470c13eb64b2.ctex"]
 
 [params]
 
