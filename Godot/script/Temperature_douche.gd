@@ -12,9 +12,16 @@ func _process(delta):
 
 
 func _on_timer_timeout():
-	$ProgressBar.value -= 1
+	$TDouche.value -= 1
+	$Time.value -= 8
+	
+	if $Time.value <= 0:
+		get_tree().change_scene_to_file("res://scene/mainmenu.tscn")
+	
 	# value not  between x and y : lose hp
+	if $TDouche.value < 70 || $TDouche.value >80:
+		$HP.value -= 1
 	
 func _input(event):
 	if event.is_action_pressed("doucheUP"):
-		$ProgressBar.value +=5
+		$TDouche.value +=5
