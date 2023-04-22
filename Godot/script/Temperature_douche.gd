@@ -25,6 +25,9 @@ func _on_timer_timeout():
 	# value not  between x and y : lose hp
 	if $TDouche.value < 700 || $TDouche.value >800:
 		$HP.value -= 3
+		if $HP.value <= 0:
+			global_vars.hp -= 1
+			get_tree().change_scene_to_file("res://scene/transition.tscn")
 	
 func _input(event):
 	if event.is_action_pressed("doucheUP"):
