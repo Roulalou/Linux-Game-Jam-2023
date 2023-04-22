@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctl6hdh3d1xtm"]
+
+[ext_resource type="Script" path="res://script/mainmenu.gd" id="1_p4hhp"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_p4hhp")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="douche" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 60.0
+offset_right = 289.0
+offset_bottom = 160.0
+text = "Seb"
+
+[node name="samourai" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 53.0
+offset_right = 672.0
+offset_bottom = 153.0
+text = "Romain"
+
+[node name="trolley" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 829.0
+offset_top = 48.0
+offset_right = 1061.0
+offset_bottom = 148.0
+text = "<Anonymous>"
+
+[connection signal="pressed" from="Control/douche" to="." method="_on_douche_pressed"]
+[connection signal="pressed" from="Control/samourai" to="." method="_on_samourai_pressed"]
+[connection signal="pressed" from="Control/trolley" to="." method="_on_trolley_pressed"]

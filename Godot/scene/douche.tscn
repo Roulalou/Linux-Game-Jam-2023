@@ -1,6 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://6gyq7q5ldn55"]
+[gd_scene load_steps=10 format=3 uid="uid://6gyq7q5ldn55"]
 
 [ext_resource type="Script" path="res://script/Temperature_douche.gd" id="1_8jtx4"]
+[ext_resource type="Texture2D" uid="uid://b5ircyff4e53x" path="res://texture/Seb_life_down.png" id="2_wkob3"]
+[ext_resource type="Texture2D" uid="uid://cj114tuxoq7a" path="res://texture/Seb_life.png" id="3_ryun5"]
+[ext_resource type="Texture2D" uid="uid://tdc42jbc4d5u" path="res://texture/Seb_time_down.png" id="4_4a8kf"]
+[ext_resource type="Texture2D" uid="uid://b0uo7r0a88bgl" path="res://texture/Seb_life_middle.png" id="4_5dwvj"]
+[ext_resource type="Texture2D" uid="uid://ybwi2as14k67" path="res://texture/Seb_time_up.png" id="5_i1db4"]
+[ext_resource type="Texture2D" uid="uid://cotnmcees4wti" path="res://texture/Seb_douche.png" id="6_j76yf"]
+[ext_resource type="Texture2D" uid="uid://df5dxuppisey" path="res://texture/Seb_time.png" id="6_nduu2"]
+[ext_resource type="Texture2D" uid="uid://bfjjrweca8snk" path="res://texture/Seb_douche_up.png" id="6_peh1o"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -11,21 +19,37 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_8jtx4")
 
-[node name="ProgressBar" type="ProgressBar" parent="Control"]
+[node name="HP" type="TextureProgressBar" parent="Control"]
 layout_mode = 0
-offset_left = 25.0
-offset_top = 528.0
-offset_right = 1127.0
-offset_bottom = 622.0
-value = 75.0
-
-[node name="TextureProgressBar" type="TextureProgressBar" parent="Control"]
-layout_mode = 0
-offset_left = 695.0
-offset_top = 24.0
-offset_right = 1134.0
-offset_bottom = 68.0
+offset_left = 836.0
+offset_top = 26.0
+offset_right = 1136.0
+offset_bottom = 76.0
 value = 100.0
+texture_under = ExtResource("2_wkob3")
+texture_over = ExtResource("3_ryun5")
+texture_progress = ExtResource("4_5dwvj")
+
+[node name="Time" type="TextureProgressBar" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+max_value = 1000.0
+value = 1000.0
+fill_mode = 5
+texture_under = ExtResource("4_4a8kf")
+texture_over = ExtResource("5_i1db4")
+texture_progress = ExtResource("6_nduu2")
+
+[node name="TDouche" type="TextureProgressBar" parent="Control"]
+layout_mode = 0
+offset_left = 125.0
+offset_top = 524.0
+offset_right = 1025.0
+offset_bottom = 624.0
+value = 75.0
+texture_over = ExtResource("6_peh1o")
+texture_progress = ExtResource("6_j76yf")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.05
