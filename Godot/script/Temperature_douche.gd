@@ -1,5 +1,8 @@
 extends Control
 
+@onready
+var global_vars = get_node("/root/Global")
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,16 +15,17 @@ func _process(delta):
 
 
 func _on_timer_timeout():
-	$TDouche.value -= 1
-	$Time.value -= 8
+	$TDouche.value -= 7 + (global_vars.level * 3)
+	$Time.value -= 7 + (global_vars.level * 0.5)
 	
 	if $Time.value <= 0:
-		get_tree().change_scene_to_file("res://scene/mainmenu.tscn")
+		global_vars.level += 1
+		get_tree().change_scene_to_file("res://scene/transition.tscn")
 	
 	# value not  between x and y : lose hp
-	if $TDouche.value < 70 || $TDouche.value >80:
-		$HP.value -= 1
+	if $TDouche.value < 700 || $TDouche.value >800:
+		$HP.value -= 3
 	
 func _input(event):
 	if event.is_action_pressed("doucheUP"):
-		$TDouche.value +=5
+		$TDouche.value += 50
