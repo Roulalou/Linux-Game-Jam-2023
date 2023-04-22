@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://6gyq7q5ldn55"]
+[gd_scene load_steps=16 format=3 uid="uid://6gyq7q5ldn55"]
 
 [ext_resource type="Script" path="res://script/Temperature_douche.gd" id="1_8jtx4"]
 [ext_resource type="Texture2D" uid="uid://b5ircyff4e53x" path="res://texture/Seb_life_down.png" id="2_wkob3"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bfjjrweca8snk" path="res://texture/Seb_douche_up.png" id="6_peh1o"]
 [ext_resource type="Texture2D" uid="uid://c5wralycn45kc" path="res://img/Seb_laver_chaud.png" id="10_irqqm"]
 [ext_resource type="Texture2D" uid="uid://dhbtlwh1klpnf" path="res://img/Seb_laver_good_1.png" id="10_ivkyw"]
+[ext_resource type="Texture2D" uid="uid://c5su1x1bmfam8" path="res://img/Seb_laver_froid.png" id="11_8i7io"]
 [ext_resource type="Texture2D" uid="uid://cqbkevpmofudd" path="res://img/Seb_laver_good_2.png" id="11_rcw3r"]
 [ext_resource type="Script" path="res://scene/laverAnim.gd" id="12_1d2nj"]
 
@@ -83,6 +84,12 @@ visible = false
 z_index = 1
 position = Vector2(639, 359)
 texture = ExtResource("10_irqqm")
+
+[node name="SebLaverFroid" type="Sprite2D" parent="Control"]
+visible = false
+z_index = 1
+position = Vector2(639, 359)
+texture = ExtResource("11_8i7io")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.05
