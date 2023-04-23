@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://djto8nh23sb0n"]
+[gd_scene load_steps=14 format=3 uid="uid://djto8nh23sb0n"]
 
 [ext_resource type="Script" path="res://script/trolley.gd" id="1_ej3ab"]
 [ext_resource type="Texture2D" uid="uid://bjxubn6x37mil" path="res://spr_train_0.png" id="2_nhkb7"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dx5r8k5hl1jom" path="res://Assets/Textures/brick.png" id="6_swnni"]
 [ext_resource type="Script" path="res://scene/FinishLine.gd" id="8_fyyn0"]
 [ext_resource type="Script" path="res://script/ObstacleManager.gd" id="9_icebl"]
+[ext_resource type="AudioStream" uid="uid://thq1pkkbmgtq" path="res://Assets/Musics/s6.mp3" id="10_esivt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ckr40"]
 size = Vector2(284, 66)
@@ -57,9 +58,12 @@ position = Vector2(-101, 0)
 zoom = Vector2(1.5, 1.5)
 
 [node name="People" parent="." instance=ExtResource("5_wlj16")]
+process_mode = 4
 position = Vector2(1003, 0)
 
 [node name="People2" type="Area2D" parent="."]
+process_mode = 4
+visible = false
 position = Vector2(686, -123)
 script = ExtResource("5_uskv7")
 
@@ -73,6 +77,8 @@ scale = Vector2(3, 3)
 texture = ExtResource("6_swnni")
 
 [node name="People3" type="Area2D" parent="."]
+process_mode = 4
+visible = false
 position = Vector2(501, 124)
 script = ExtResource("5_uskv7")
 
@@ -86,6 +92,8 @@ scale = Vector2(3, 3)
 texture = ExtResource("6_swnni")
 
 [node name="People4" type="Area2D" parent="."]
+process_mode = 4
+visible = false
 position = Vector2(1406, 121)
 script = ExtResource("5_uskv7")
 
@@ -99,6 +107,8 @@ scale = Vector2(3, 3)
 texture = ExtResource("6_swnni")
 
 [node name="People5" type="Area2D" parent="."]
+process_mode = 4
+visible = false
 position = Vector2(1566, -120)
 script = ExtResource("5_uskv7")
 
@@ -112,10 +122,12 @@ scale = Vector2(3, 3)
 texture = ExtResource("6_swnni")
 
 [node name="People6" parent="." instance=ExtResource("5_wlj16")]
+process_mode = 4
+visible = false
 position = Vector2(1991, 8)
 
 [node name="FinishLine" type="Area2D" parent="."]
-position = Vector2(2100, 0)
+position = Vector2(3000, 0)
 scale = Vector2(1, 20)
 script = ExtResource("8_fyyn0")
 
@@ -125,6 +137,14 @@ shape = SubResource("RectangleShape2D_4d3if")
 [node name="ObstacleManager" type="Node2D" parent="."]
 script = ExtResource("9_icebl")
 m_obstacle = ExtResource("5_wlj16")
+m_obstacleSpawnGap = 550.0
+m_obstacleGapMargin = 30.0
+
+[node name="AudioListener2D" type="AudioListener2D" parent="."]
+current = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_esivt")
 
 [connection signal="body_entered" from="People2" to="People2" method="_on_body_entered"]
 [connection signal="body_entered" from="People3" to="People3" method="_on_body_entered"]

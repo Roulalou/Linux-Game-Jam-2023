@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bvte1ubvbkopt"]
 
 [ext_resource type="Script" path="res://script/PersonCollision.gd" id="1_q0kq2"]
-[ext_resource type="Texture2D" uid="uid://dx5r8k5hl1jom" path="res://Assets/Textures/brick.png" id="2_28fbr"]
+[ext_resource type="Texture2D" uid="uid://ckytj7h2km7ox" path="res://Assets/Textures/personnetransparent.png" id="2_tl68n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gq3sn"]
 
@@ -15,7 +15,6 @@ shape = SubResource("RectangleShape2D_gq3sn")
 
 [node name="People" type="Sprite2D" parent="."]
 z_index = 1
-scale = Vector2(3, 3)
-texture = ExtResource("2_28fbr")
+texture = ExtResource("2_tl68n")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
