@@ -100,7 +100,7 @@ autoplay = true
 
 [node name="music" type="AudioStreamPlayer2D" parent="Control"]
 stream = ExtResource("13_5ienq")
-volume_db = 5.0
+volume_db = 7.0
 autoplay = true
 
 [node name="Timer" type="Timer" parent="."]
