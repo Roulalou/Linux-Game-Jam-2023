@@ -9,6 +9,8 @@ extends Node2D
 
 @export var m_numberOfObstacles = 20;
 
+@export var m_verticalOffset : float = 122;
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,12 +22,13 @@ func _ready():
 func _process(delta):
 	pass
 	
-func SpawnObstacle(offsetScale):
+func SpawnObstacle(xOffsetScale, yOffsetScale):
 	var instance = m_obstacle.instantiate() as Node2D
-	instance.position = position +  (Vector2.RIGHT * (offsetScale * m_obstacleSpawnGap + m_obstacleGapMargin))
+	instance.position = position +  (Vector2.RIGHT * (xOffsetScale * m_obstacleSpawnGap + m_obstacleGapMargin)) + (Vector2.UP * (yOffsetScale * m_verticalOffset))
 	add_child(instance)
 	
 func SpawnObstacles():
 	for i in m_numberOfObstacles:
-		SpawnObstacle(i+1)
+		var yOffset = randi_range(-1, 1)
+		SpawnObstacle(i+1, yOffset)
 	
