@@ -1,9 +1,10 @@
 extends Node2D
-var df = 1
 var wait = false
+@onready
+var global_vars = get_node("/root/Global")
 
 func _ready():
-	var actTime = randf_range(2,(15/df))
+	var actTime = randf_range(2,(10/global_vars.level))
 	$Temps.wait_time = actTime
 	$Temps.start()
 
@@ -21,6 +22,8 @@ func _on_dlai_timeout():
 	$Idle.visible = false
 	$Homme.visible = true
 	$Homme.play("Fail")
+	global_vars.hp -= 1
+	global_vars.lost = true
 	# Replace with function body.
 	
 func _input(event):
@@ -30,3 +33,11 @@ func _input(event):
 		$Idle.visible = false
 		$Homme.visible = true
 		$Homme.play("Success")
+		global_vars.level += 1
+
+
+func _on_homme_animation_finished():
+	if global_vars.lost:
+		get_tree().change_scene_to_file("res://scene/transition.tscn")
+	else:
+		get_tree().change_scene_to_file("res://scene/transition.tscn")
