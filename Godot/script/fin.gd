@@ -16,4 +16,5 @@ func _process(delta):
 
 func _on_button_pressed():
 	global_vars.hp = 4
+	global_vars.level = 1
 	get_tree().change_scene_to_file("res://scene/mainmenu.tscn")
