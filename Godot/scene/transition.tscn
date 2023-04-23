@@ -96,7 +96,7 @@ animation = &"coeur"
 autoplay = "coeur"
 
 [node name="Timer" type="Timer" parent="Control"]
-wait_time = 4.5
+wait_time = 4.8
 autostart = true
 
 [node name="GOOD" type="AudioStreamPlayer" parent="Control"]
