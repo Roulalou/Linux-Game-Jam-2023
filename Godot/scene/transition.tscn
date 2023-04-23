@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://b5bkwvo3228fi"]
+[gd_scene load_steps=11 format=3 uid="uid://b5bkwvo3228fi"]
 
 [ext_resource type="Script" path="res://script/transition.gd" id="1_8q0nc"]
+[ext_resource type="FontFile" uid="uid://b4yu215b2pey4" path="res://texture/04B_30__.TTF" id="2_1dk7n"]
 [ext_resource type="Texture2D" uid="uid://dsj5ktxcm65ur" path="res://img/Seb_transi_GOOD_1.png" id="3_nl1ef"]
 [ext_resource type="Texture2D" uid="uid://dqygtihhbm2kq" path="res://img/Seb_transi_GOOD_2.png" id="4_lld2i"]
 [ext_resource type="Texture2D" uid="uid://bvimqplynxsvc" path="res://img/Seb_transi_SAD_1.png" id="5_y0xy0"]
@@ -48,15 +49,18 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Number" type="RichTextLabel" parent="Control"]
+[node name="Number" type="Label" parent="Control"]
 z_index = 1
-layout_mode = 2
-offset_left = 496.0
-offset_top = 51.0
-offset_right = 883.0
-offset_bottom = 330.0
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-text = "NUMBER"
+layout_mode = 0
+offset_left = 395.0
+offset_right = 909.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_1dk7n")
+theme_override_font_sizes/font_size = 44
+text = "X"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="transiAnim" type="AnimatedSprite2D" parent="Control"]
 position = Vector2(640.5, 361)
@@ -102,7 +106,7 @@ autostart = true
 
 [node name="GOOD" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("7_emc1l")
-volume_db = -7.0
+volume_db = -10.0
 
 [node name="SAD" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("8_tu41m")

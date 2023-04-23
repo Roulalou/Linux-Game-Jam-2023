@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://vh5rtwwl57c5"]
+[gd_scene load_steps=5 format=3 uid="uid://vh5rtwwl57c5"]
 
 [ext_resource type="Script" path="res://script/fin.gd" id="1_ath3n"]
 [ext_resource type="AudioStream" uid="uid://b0jqlgggngelp" path="res://sound/Seb winneris.ogg" id="2_0fm5a"]
+[ext_resource type="FontFile" uid="uid://b4yu215b2pey4" path="res://texture/04B_30__.TTF" id="2_bnmy2"]
+[ext_resource type="Texture2D" uid="uid://dfk8pgiyograf" path="res://img/Seb_fin.png" id="2_ii0cq"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_ath3n")
@@ -12,20 +14,42 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="Control"]
+[node name="SebFin" type="Sprite2D" parent="Control"]
+position = Vector2(640, 360)
+scale = Vector2(0.666667, 0.666667)
+texture = ExtResource("2_ii0cq")
+
+[node name="Above" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 297.0
-offset_top = 207.0
-offset_right = 1019.0
+offset_left = 2.0
+offset_top = 40.0
+offset_right = 1282.0
 offset_bottom = 299.0
-text = "GG ! Your score is : X"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bnmy2")
+theme_override_font_sizes/font_size = 50
+text = "Congratulation ! 
+Your score is"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Control"]
+offset_left = 4.0
+offset_top = 534.0
+offset_right = 1284.0
+offset_bottom = 620.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_bnmy2")
+theme_override_font_sizes/font_size = 50
+text = "XY"
+horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 539.0
-offset_top = 501.0
-offset_right = 766.0
-offset_bottom = 583.0
+offset_left = 547.0
+offset_top = 625.0
+offset_right = 774.0
+offset_bottom = 707.0
+theme_override_fonts/font = ExtResource("2_bnmy2")
 text = "Title Screen"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]
