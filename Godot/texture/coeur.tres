@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" load_steps=3 format=3 uid="uid://btk2caxv01d8u"]
+
+[ext_resource type="Texture2D" uid="uid://c56gmpy5ljcp" path="res://img/Seb_coeur1.png" id="1_oyc11"]
+[ext_resource type="Texture2D" uid="uid://bwulyqusgh1b2" path="res://img/Seb_coeur2.png" id="2_5ctwy"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_oyc11")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_5ctwy")
+}],
+"loop": true,
+"name": &"coeur",
+"speed": 5.0
+}]
