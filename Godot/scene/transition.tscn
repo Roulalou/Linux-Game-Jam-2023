@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://b5bkwvo3228fi"]
+[gd_scene load_steps=9 format=3 uid="uid://b5bkwvo3228fi"]
 
 [ext_resource type="Script" path="res://script/transition.gd" id="1_8q0nc"]
 [ext_resource type="Texture2D" uid="uid://dsj5ktxcm65ur" path="res://img/Seb_transi_GOOD_1.png" id="3_nl1ef"]
 [ext_resource type="Texture2D" uid="uid://dqygtihhbm2kq" path="res://img/Seb_transi_GOOD_2.png" id="4_lld2i"]
 [ext_resource type="Texture2D" uid="uid://bvimqplynxsvc" path="res://img/Seb_transi_SAD_1.png" id="5_y0xy0"]
 [ext_resource type="Texture2D" uid="uid://8td872o5wrl1" path="res://img/Seb_transi_SAD_2.png" id="6_8ih4u"]
+[ext_resource type="AudioStream" uid="uid://d1cktdpkdrbo2" path="res://sound/Seb 384. Steppin Up.mp3" id="7_emc1l"]
 [ext_resource type="SpriteFrames" uid="uid://btk2caxv01d8u" path="res://texture/coeur.tres" id="7_u1dkp"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ws0nl"]
@@ -95,7 +96,13 @@ animation = &"coeur"
 autoplay = "coeur"
 
 [node name="Timer" type="Timer" parent="Control"]
-wait_time = 5.0
+wait_time = 4.5
 autostart = true
+
+[node name="GOOD" type="AudioStreamPlayer" parent="Control"]
+stream = ExtResource("7_emc1l")
+volume_db = -7.0
+
+[node name="SAD" type="AudioStreamPlayer" parent="Control"]
 
 [connection signal="timeout" from="Control/Timer" to="." method="_on_timer_timeout"]

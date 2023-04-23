@@ -20,6 +20,7 @@ func _ready():
 		global_vars.lost = false
 	else : 
 		$Control/transiAnim.animation = "Good"
+		$Control/GOOD.playing = true
 		
 	if global_vars.hp >= 4:
 		$Control/C4.visible = true

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://vh5rtwwl57c5"]
+[gd_scene load_steps=3 format=3 uid="uid://vh5rtwwl57c5"]
 
 [ext_resource type="Script" path="res://script/fin.gd" id="1_ath3n"]
+[ext_resource type="AudioStream" uid="uid://b0jqlgggngelp" path="res://sound/Seb winneris.ogg" id="2_0fm5a"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_ath3n")
@@ -26,5 +27,9 @@ offset_top = 501.0
 offset_right = 766.0
 offset_bottom = 583.0
 text = "Title Screen"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control"]
+stream = ExtResource("2_0fm5a")
+autoplay = true
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
