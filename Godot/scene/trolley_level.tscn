@@ -44,7 +44,6 @@ m_speedDifficultyOffset = 10.0
 [node name="TrolleyCollisionShape" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(2, -1)
 shape = SubResource("RectangleShape2D_ckr40")
-disabled = true
 
 [node name="Trolley" type="Sprite2D" parent="CharacterBody2D"]
 z_index = 2
@@ -123,7 +122,7 @@ script = ExtResource("8_fyyn0")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FinishLine"]
 shape = SubResource("RectangleShape2D_4d3if")
 
-[node name="ObstacleManager" type="Node" parent="."]
+[node name="ObstacleManager" type="Node2D" parent="."]
 script = ExtResource("9_icebl")
 m_obstacle = ExtResource("5_wlj16")
 

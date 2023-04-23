@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxyiyegp3ibaj"
-path="res://.godot/imported/Rail_edited-export.png-ba47a11b8243edfbb78ab465a1034dac.ctex"
+uid="uid://b1qluuhb6utx0"
+path="res://.godot/imported/logo.png-5e59f479404a7ce87a0fab15f867eecc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Textures/Rail_edited-export.png"
-dest_files=["res://.godot/imported/Rail_edited-export.png-ba47a11b8243edfbb78ab465a1034dac.ctex"]
+source_file="res://img/logo.png"
+dest_files=["res://.godot/imported/logo.png-5e59f479404a7ce87a0fab15f867eecc.ctex"]
 
 [params]
 

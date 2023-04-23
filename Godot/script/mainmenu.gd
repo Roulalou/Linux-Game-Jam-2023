@@ -11,7 +11,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	$ParallaxBackground.scroll_offset += Vector2(0,1) * 1000 * delta
 
 
 func _on_douche_pressed():

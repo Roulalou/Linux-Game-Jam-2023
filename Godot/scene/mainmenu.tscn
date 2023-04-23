@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ctl6hdh3d1xtm"]
+[gd_scene load_steps=4 format=3 uid="uid://ctl6hdh3d1xtm"]
 
 [ext_resource type="Script" path="res://script/mainmenu.gd" id="1_p4hhp"]
-[ext_resource type="Texture2D" uid="uid://c8vxjd6sllbn" path="res://img/savetheday.png" id="2_kw3ws"]
+[ext_resource type="Texture2D" uid="uid://b1qluuhb6utx0" path="res://img/logo.png" id="2_7x1h5"]
+[ext_resource type="Texture2D" uid="uid://7hgkulgotdcx" path="res://img/Sans titre-4.png" id="3_b78ip"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_p4hhp")
@@ -14,27 +15,27 @@ offset_bottom = 40.0
 
 [node name="douche" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 57.0
-offset_top = 60.0
-offset_right = 289.0
-offset_bottom = 160.0
+offset_left = 59.0
+offset_top = 592.0
+offset_right = 291.0
+offset_bottom = 692.0
 text = "Seb"
 
 [node name="samourai" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 440.0
-offset_top = 53.0
-offset_right = 672.0
-offset_bottom = 153.0
-text = "Romain"
+offset_left = 528.0
+offset_top = 592.0
+offset_right = 760.0
+offset_bottom = 692.0
+text = "Love Attack"
 
 [node name="trolley" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 829.0
-offset_top = 48.0
-offset_right = 1061.0
-offset_bottom = 148.0
-text = "<Anonymous>"
+offset_left = 1000.0
+offset_top = 592.0
+offset_right = 1232.0
+offset_bottom = 692.0
+text = "Trolley Undilemma"
 
 [node name="Multi" type="Button" parent="Control"]
 layout_mode = 0
@@ -45,8 +46,14 @@ offset_bottom = 395.0
 text = "Multi"
 
 [node name="Savetheday" type="Sprite2D" parent="."]
-position = Vector2(967, 433)
-texture = ExtResource("2_kw3ws")
+position = Vector2(648, 216)
+texture = ExtResource("2_7x1h5")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Background" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(640, 360)
+texture = ExtResource("3_b78ip")
 
 [connection signal="pressed" from="Control/douche" to="." method="_on_douche_pressed"]
 [connection signal="pressed" from="Control/samourai" to="." method="_on_samourai_pressed"]
