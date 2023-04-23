@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://6gyq7q5ldn55"]
+[gd_scene load_steps=18 format=3 uid="uid://6gyq7q5ldn55"]
 
 [ext_resource type="Script" path="res://script/Temperature_douche.gd" id="1_8jtx4"]
 [ext_resource type="Texture2D" uid="uid://b5ircyff4e53x" path="res://texture/Seb_life_down.png" id="2_wkob3"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://c5su1x1bmfam8" path="res://img/Seb_laver_froid.png" id="11_8i7io"]
 [ext_resource type="Texture2D" uid="uid://cqbkevpmofudd" path="res://img/Seb_laver_good_2.png" id="11_rcw3r"]
 [ext_resource type="Script" path="res://scene/laverAnim.gd" id="12_1d2nj"]
+[ext_resource type="AudioStream" uid="uid://xh73i6wks28d" path="res://sound/Seb Shower Sound Effect (128 kbps).mp3" id="12_58t1p"]
+[ext_resource type="AudioStream" uid="uid://d4mardpsq42wk" path="res://sound/Seb Squirm Worm - TrackTribe-[AudioTrimmer.com].mp3" id="13_5ienq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ga6mv"]
 animations = [{
@@ -90,6 +92,16 @@ visible = false
 z_index = 1
 position = Vector2(639, 359)
 texture = ExtResource("11_8i7io")
+
+[node name="douche" type="AudioStreamPlayer2D" parent="Control"]
+stream = ExtResource("12_58t1p")
+volume_db = -5.0
+autoplay = true
+
+[node name="music" type="AudioStreamPlayer2D" parent="Control"]
+stream = ExtResource("13_5ienq")
+volume_db = 5.0
+autoplay = true
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.05

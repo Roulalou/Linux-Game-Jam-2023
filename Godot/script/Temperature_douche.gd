@@ -15,7 +15,7 @@ func _process(delta):
 
 
 func _on_timer_timeout():
-	$TDouche.value -= 6 + (global_vars.level * 2)
+	$TDouche.value -= 6 + (global_vars.level * 1)
 	$Time.value -= 8 + (global_vars.level * 0.5)
 	
 	if $Time.value <= 0:
