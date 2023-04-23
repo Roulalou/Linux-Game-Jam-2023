@@ -31,17 +31,20 @@ func _ready():
 		$Control/C1.visible = true
 
 func _on_timer_timeout():
-	if global_vars.game == "douche":
-		get_tree().change_scene_to_file("res://scene/douche.tscn")
-	elif global_vars.game == "bouquet":
-		get_tree().change_scene_to_file("res://scene/bouquet.tscn")
-	elif global_vars.game == "trolley":
-		get_tree().change_scene_to_file("res://scene/trolley_level.tscn")
+	if global_vars.hp <= 0:
+		get_tree().change_scene_to_file("res://scene/fin.tscn")
 	else:
-		var next = randi() % 3
-		if next == 0: 
+		if global_vars.game == "douche":
 			get_tree().change_scene_to_file("res://scene/douche.tscn")
-		if next == 1:
+		elif global_vars.game == "bouquet":
 			get_tree().change_scene_to_file("res://scene/bouquet.tscn")
-		if next == 2:
+		elif global_vars.game == "trolley":
 			get_tree().change_scene_to_file("res://scene/trolley_level.tscn")
+		else:
+			var next = randi() % 3
+			if next == 0: 
+				get_tree().change_scene_to_file("res://scene/douche.tscn")
+			if next == 1:
+				get_tree().change_scene_to_file("res://scene/bouquet.tscn")
+			if next == 2:
+				get_tree().change_scene_to_file("res://scene/trolley_level.tscn")
