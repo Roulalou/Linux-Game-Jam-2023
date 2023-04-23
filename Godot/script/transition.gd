@@ -18,6 +18,7 @@ func _ready():
 	if global_vars.lost == true:
 		$Control/transiAnim.animation = "sad"
 		global_vars.lost = false
+		$Control/SAD.playing = true
 	else : 
 		$Control/transiAnim.animation = "Good"
 		$Control/GOOD.playing = true
