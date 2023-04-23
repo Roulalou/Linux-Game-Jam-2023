@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://djto8nh23sb0n"]
+[gd_scene load_steps=10 format=3 uid="uid://djto8nh23sb0n"]
 
 [ext_resource type="Script" path="res://script/trolley.gd" id="1_ej3ab"]
 [ext_resource type="Texture2D" uid="uid://bjxubn6x37mil" path="res://spr_train_0.png" id="2_nhkb7"]
 [ext_resource type="Texture2D" uid="uid://4ehb8rq07t8d" path="res://Assets/Textures/road_plain.png" id="2_uxbrl"]
 [ext_resource type="Texture2D" uid="uid://dipe760itki7u" path="res://Assets/Textures/Rail_edited.png" id="4_u5hcu"]
 [ext_resource type="Script" path="res://script/PersonCollision.gd" id="5_uskv7"]
+[ext_resource type="PackedScene" uid="uid://bvte1ubvbkopt" path="res://Assets/Prefabs/people.tscn" id="5_wlj16"]
 [ext_resource type="Texture2D" uid="uid://dx5r8k5hl1jom" path="res://Assets/Textures/brick.png" id="6_swnni"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ckr40"]
@@ -32,7 +33,7 @@ region_rect = Rect2(0, 0, 3.2e+06, 32000)
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." groups=["Player"]]
 motion_mode = 1
 script = ExtResource("1_ej3ab")
-m_speed = 200.0
+m_speed = 300.0
 
 [node name="TrolleyCollisionShape" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(2, -1)
@@ -49,21 +50,11 @@ position = Vector2(300, 0)
 position = Vector2(-101, 0)
 zoom = Vector2(1.5, 1.5)
 
-[node name="People" type="Area2D" parent="."]
-position = Vector2(1615, 0)
-script = ExtResource("5_uskv7")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="People"]
-scale = Vector2(4, 4)
-shape = SubResource("RectangleShape2D_gq3sn")
-
-[node name="People" type="Sprite2D" parent="People"]
-z_index = 1
-scale = Vector2(3, 3)
-texture = ExtResource("6_swnni")
+[node name="People" parent="." instance=ExtResource("5_wlj16")]
+position = Vector2(1013, 0)
 
 [node name="People2" type="Area2D" parent="."]
-position = Vector2(1130, -123)
+position = Vector2(808, -123)
 script = ExtResource("5_uskv7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="People2"]
@@ -76,7 +67,7 @@ scale = Vector2(3, 3)
 texture = ExtResource("6_swnni")
 
 [node name="People3" type="Area2D" parent="."]
-position = Vector2(739, 124)
+position = Vector2(501, 124)
 script = ExtResource("5_uskv7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="People3"]
@@ -89,7 +80,7 @@ scale = Vector2(3, 3)
 texture = ExtResource("6_swnni")
 
 [node name="People4" type="Area2D" parent="."]
-position = Vector2(2454, 121)
+position = Vector2(1406, 121)
 script = ExtResource("5_uskv7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="People4"]
@@ -102,7 +93,7 @@ scale = Vector2(3, 3)
 texture = ExtResource("6_swnni")
 
 [node name="People5" type="Area2D" parent="."]
-position = Vector2(2054, -125)
+position = Vector2(1566, -125)
 script = ExtResource("5_uskv7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="People5"]
@@ -114,7 +105,9 @@ z_index = 1
 scale = Vector2(3, 3)
 texture = ExtResource("6_swnni")
 
-[connection signal="body_entered" from="People" to="People" method="_on_body_entered"]
+[node name="People6" parent="." instance=ExtResource("5_wlj16")]
+position = Vector2(1991, 8)
+
 [connection signal="body_entered" from="People2" to="People2" method="_on_body_entered"]
 [connection signal="body_entered" from="People3" to="People3" method="_on_body_entered"]
 [connection signal="body_entered" from="People4" to="People4" method="_on_body_entered"]
