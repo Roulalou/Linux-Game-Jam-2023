@@ -15,9 +15,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 func _ready():
 	velocity.x = m_speed + (m_speedDifficultyOffset * global_vars.level);
 	
-func _process(delta):
-	pass
-	
+
 
 func _physics_process(delta):
 		move_and_slide();
