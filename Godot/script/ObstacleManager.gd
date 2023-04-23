@@ -1,6 +1,7 @@
 extends Node
 
-var m_obstacle = preload("res://Assets/Prefabs/people.tscn")
+#var m_obstacle = preload("res://Assets/Prefabs/people.tscn")
+@export var m_obstacle: PackedScene
 
 
 # Called when the node enters the scene tree for the first time.
