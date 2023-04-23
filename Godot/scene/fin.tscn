@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://vh5rtwwl57c5"]
+
+[ext_resource type="Script" path="res://script/fin.gd" id="1_ath3n"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ath3n")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 297.0
+offset_top = 207.0
+offset_right = 1019.0
+offset_bottom = 299.0
+text = "GG ! Your score is : X"
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 539.0
+offset_top = 501.0
+offset_right = 766.0
+offset_bottom = 583.0
+text = "Title Screen"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
