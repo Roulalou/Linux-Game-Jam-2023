@@ -1,11 +1,28 @@
-[gd_scene load_steps=9 format=3 uid="uid://ctl6hdh3d1xtm"]
+[gd_scene load_steps=16 format=3 uid="uid://ctl6hdh3d1xtm"]
 
 [ext_resource type="Script" path="res://script/mainmenu.gd" id="1_p4hhp"]
 [ext_resource type="Texture2D" uid="uid://b1qluuhb6utx0" path="res://img/logo.png" id="2_7x1h5"]
 [ext_resource type="Texture2D" uid="uid://b7bdk1av6nj15" path="res://img/bouton fleur.png" id="2_dbykj"]
+[ext_resource type="FontFile" uid="uid://b4yu215b2pey4" path="res://texture/04B_30__.TTF" id="2_kyend"]
 [ext_resource type="AudioStream" uid="uid://d3w7prprmnen7" path="res://sound/Seb awesomeness.wav" id="2_q3fa0"]
 [ext_resource type="Texture2D" uid="uid://7hgkulgotdcx" path="res://img/Sans titre-4.png" id="3_b78ip"]
+[ext_resource type="Texture2D" uid="uid://by4gywrmjswts" path="res://img/Seb_buttonlogo.png" id="3_f4ie6"]
 [ext_resource type="Texture2D" uid="uid://c3v27mf4dd13d" path="res://img/bouton fleur hover.png" id="3_lksid"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tww3m"]
+texture = ExtResource("3_f4ie6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r4v5u"]
+texture = ExtResource("3_f4ie6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1b8i0"]
+texture = ExtResource("3_f4ie6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8n6dk"]
+texture = ExtResource("3_f4ie6")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xx66f"]
+texture = ExtResource("3_f4ie6")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8jl3s"]
 texture = ExtResource("2_dbykj")
@@ -13,7 +30,7 @@ texture = ExtResource("2_dbykj")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tdjm7"]
 texture = ExtResource("3_lksid")
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 script = ExtResource("1_p4hhp")
 
 [node name="Control" type="Control" parent="."]
@@ -28,7 +45,15 @@ offset_left = 59.0
 offset_top = 592.0
 offset_right = 291.0
 offset_bottom = 692.0
-text = "Hot & Cold"
+theme_override_fonts/font = ExtResource("2_kyend")
+theme_override_styles/normal = SubResource("StyleBoxTexture_tww3m")
+theme_override_styles/hover = SubResource("StyleBoxTexture_r4v5u")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1b8i0")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_8n6dk")
+theme_override_styles/focus = SubResource("StyleBoxTexture_xx66f")
+text = "Hot
+&
+Cold"
 
 [node name="samourai" type="Button" parent="Control"]
 layout_mode = 0
