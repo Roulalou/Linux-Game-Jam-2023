@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://ctl6hdh3d1xtm"]
+[gd_scene load_steps=25 format=3 uid="uid://ctl6hdh3d1xtm"]
 
 [ext_resource type="Script" path="res://script/mainmenu.gd" id="1_p4hhp"]
 [ext_resource type="Texture2D" uid="uid://b1qluuhb6utx0" path="res://img/logo.png" id="2_7x1h5"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://7hgkulgotdcx" path="res://img/Sans titre-4.png" id="3_b78ip"]
 [ext_resource type="Texture2D" uid="uid://by4gywrmjswts" path="res://img/Seb_buttonlogo.png" id="3_f4ie6"]
 [ext_resource type="Texture2D" uid="uid://c3v27mf4dd13d" path="res://img/bouton fleur hover.png" id="3_lksid"]
+[ext_resource type="Texture2D" uid="uid://dstdv86wh3twp" path="res://img/random.png" id="6_dyvi0"]
+[ext_resource type="Texture2D" uid="uid://c0yui4x4sowln" path="res://img/bouton trolley.png" id="6_nbt6k"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tww3m"]
 texture = ExtResource("3_f4ie6")
@@ -30,6 +32,27 @@ texture = ExtResource("2_dbykj")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tdjm7"]
 texture = ExtResource("3_lksid")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p4rvc"]
+texture = ExtResource("6_nbt6k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qg5y4"]
+texture = ExtResource("6_nbt6k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_68v7s"]
+texture = ExtResource("6_dyvi0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mpspi"]
+texture = ExtResource("6_dyvi0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tt2xn"]
+texture = ExtResource("6_dyvi0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xdn7k"]
+texture = ExtResource("6_dyvi0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nmyn6"]
+texture = ExtResource("6_dyvi0")
+
 [node name="Node2D2" type="Node2D"]
 script = ExtResource("1_p4hhp")
 
@@ -41,10 +64,16 @@ offset_bottom = 40.0
 
 [node name="douche" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 59.0
-offset_top = 592.0
-offset_right = 291.0
-offset_bottom = 692.0
+offset_left = 80.0
+offset_top = 544.0
+offset_right = 261.0
+offset_bottom = 700.0
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_kyend")
 theme_override_styles/normal = SubResource("StyleBoxTexture_tww3m")
 theme_override_styles/hover = SubResource("StyleBoxTexture_r4v5u")
@@ -58,19 +87,20 @@ Cold"
 [node name="samourai" type="Button" parent="Control"]
 layout_mode = 0
 offset_left = 528.0
-offset_top = 576.0
+offset_top = 568.0
 offset_right = 760.0
-offset_bottom = 704.0
+offset_bottom = 696.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_8jl3s")
 theme_override_styles/hover = SubResource("StyleBoxTexture_tdjm7")
 
 [node name="trolley" type="Button" parent="Control"]
 layout_mode = 0
 offset_left = 1000.0
-offset_top = 592.0
+offset_top = 576.0
 offset_right = 1232.0
 offset_bottom = 692.0
-text = "Trolley Undilemma"
+theme_override_styles/normal = SubResource("StyleBoxTexture_p4rvc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qg5y4")
 
 [node name="Multi" type="Button" parent="Control"]
 layout_mode = 0
@@ -78,7 +108,14 @@ offset_left = 528.0
 offset_top = 384.0
 offset_right = 759.0
 offset_bottom = 512.0
-text = "Multi"
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_kyend")
+theme_override_styles/normal = SubResource("StyleBoxTexture_68v7s")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mpspi")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tt2xn")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_xdn7k")
+theme_override_styles/focus = SubResource("StyleBoxTexture_nmyn6")
+text = "RANDOM"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control"]
 stream = ExtResource("2_q3fa0")

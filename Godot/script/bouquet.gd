@@ -4,7 +4,7 @@ var wait = false
 var global_vars = get_node("/root/Global")
 
 func _ready():
-	var actTime = randf_range(2,(10/global_vars.level))
+	var actTime = randf_range(2,((10/global_vars.level)+2))
 	$Temps.wait_time = actTime
 	$Temps.start()
 	$Music.play()
