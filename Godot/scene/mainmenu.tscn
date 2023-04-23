@@ -37,6 +37,7 @@ offset_bottom = 148.0
 text = "<Anonymous>"
 
 [node name="Random" type="Button" parent="Control"]
+layout_mode = 0
 offset_left = 446.0
 offset_top = 311.0
 offset_right = 678.0
@@ -50,5 +51,5 @@ texture = ExtResource("2_kw3ws")
 [connection signal="pressed" from="Control/douche" to="." method="_on_douche_pressed"]
 [connection signal="pressed" from="Control/samourai" to="." method="_on_samourai_pressed"]
 [connection signal="pressed" from="Control/trolley" to="." method="_on_trolley_pressed"]
-[connection signal="pressed" from="Control/Random" to="." method="_on_douche_pressed"]
 [connection signal="pressed" from="Control/Random" to="." method="_on_random_pressed"]
+[connection signal="pressed" from="Control/Random" to="." method="_on_douche_pressed"]
