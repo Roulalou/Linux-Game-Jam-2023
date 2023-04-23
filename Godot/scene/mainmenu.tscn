@@ -1,6 +1,4 @@
-
-[gd_scene load_steps=22 format=3 uid="uid://ctl6hdh3d1xtm"]
-
+[gd_scene load_steps=25 format=3 uid="uid://ctl6hdh3d1xtm"]
 
 [ext_resource type="Script" path="res://script/mainmenu.gd" id="1_p4hhp"]
 [ext_resource type="Texture2D" uid="uid://b1qluuhb6utx0" path="res://img/logo.png" id="2_7x1h5"]
@@ -10,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://7hgkulgotdcx" path="res://img/Sans titre-4.png" id="3_b78ip"]
 [ext_resource type="Texture2D" uid="uid://by4gywrmjswts" path="res://img/Seb_buttonlogo.png" id="3_f4ie6"]
 [ext_resource type="Texture2D" uid="uid://c3v27mf4dd13d" path="res://img/bouton fleur hover.png" id="3_lksid"]
+[ext_resource type="Texture2D" uid="uid://dstdv86wh3twp" path="res://img/random.png" id="6_dyvi0"]
 [ext_resource type="Texture2D" uid="uid://c0yui4x4sowln" path="res://img/bouton trolley.png" id="6_nbt6k"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tww3m"]
@@ -32,6 +31,12 @@ texture = ExtResource("2_dbykj")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tdjm7"]
 texture = ExtResource("3_lksid")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p4rvc"]
+texture = ExtResource("6_nbt6k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qg5y4"]
+texture = ExtResource("6_nbt6k")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_68v7s"]
 texture = ExtResource("6_dyvi0")
@@ -59,10 +64,10 @@ offset_bottom = 40.0
 
 [node name="douche" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 59.0
-offset_top = 528.0
-offset_right = 240.0
-offset_bottom = 692.0
+offset_left = 80.0
+offset_top = 544.0
+offset_right = 261.0
+offset_bottom = 700.0
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
@@ -82,9 +87,9 @@ Cold"
 [node name="samourai" type="Button" parent="Control"]
 layout_mode = 0
 offset_left = 528.0
-offset_top = 560.0
+offset_top = 568.0
 offset_right = 760.0
-offset_bottom = 688.0
+offset_bottom = 696.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_8jl3s")
 theme_override_styles/hover = SubResource("StyleBoxTexture_tdjm7")
 
@@ -92,10 +97,10 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_tdjm7")
 layout_mode = 0
 offset_left = 1000.0
 offset_top = 576.0
-offset_right = 1184.0
-offset_bottom = 676.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_1ax8k")
-theme_override_styles/hover = SubResource("StyleBoxTexture_8hviy")
+offset_right = 1232.0
+offset_bottom = 692.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_p4rvc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qg5y4")
 
 [node name="Multi" type="Button" parent="Control"]
 layout_mode = 0
