@@ -125,6 +125,7 @@ shape = SubResource("RectangleShape2D_4d3if")
 
 [node name="ObstacleManager" type="Node" parent="."]
 script = ExtResource("9_icebl")
+m_obstacle = ExtResource("5_wlj16")
 
 [connection signal="body_entered" from="People2" to="People2" method="_on_body_entered"]
 [connection signal="body_entered" from="People3" to="People3" method="_on_body_entered"]
