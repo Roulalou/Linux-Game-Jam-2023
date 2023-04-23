@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" path="res://script/mainmenu.gd" id="1_p4hhp"]
 [ext_resource type="Texture2D" uid="uid://b1qluuhb6utx0" path="res://img/logo.png" id="2_7x1h5"]
+[ext_resource type="AudioStream" uid="uid://d3w7prprmnen7" path="res://sound/Seb awesomeness.wav" id="2_q3fa0"]
 [ext_resource type="Texture2D" uid="uid://7hgkulgotdcx" path="res://img/Sans titre-4.png" id="3_b78ip"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_sbqej"]
@@ -21,7 +22,7 @@ offset_left = 59.0
 offset_top = 592.0
 offset_right = 291.0
 offset_bottom = 692.0
-text = "Seb"
+text = "Hot & Cold"
 
 [node name="TextureButton" type="TextureButton" parent="Control/douche"]
 layout_mode = 0
@@ -52,6 +53,10 @@ offset_top = 384.0
 offset_right = 759.0
 offset_bottom = 512.0
 text = "Multi"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Control"]
+stream = ExtResource("2_q3fa0")
+autoplay = true
 
 [node name="Savetheday" type="Sprite2D" parent="."]
 position = Vector2(648, 216)
