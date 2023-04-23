@@ -16,17 +16,17 @@ func _process(delta):
 
 func _on_douche_pressed():
 	global_vars.game = "douche"
-	get_tree().change_scene_to_file("res://scene/douche.tscn")
+	get_tree().change_scene_to_file("res://scene/transition.tscn")
 
 
 func _on_samourai_pressed():
 	global_vars.game = "bouquet"
-	get_tree().change_scene_to_file("res://scene/bouquet.tscn")
+	get_tree().change_scene_to_file("res://scene/transition.tscn")
 
 
 func _on_trolley_pressed():
 	global_vars.game = "trolley"
-	get_tree().change_scene_to_file("res://scene/trolley_level.tscn")
+	get_tree().change_scene_to_file("res://scene/transition.tscn")
 
 
 func _on_random_pressed():

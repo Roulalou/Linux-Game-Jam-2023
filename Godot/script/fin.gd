@@ -6,7 +6,7 @@ var global_vars = get_node("/root/Global")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Control/Label.text = "GG ! Your score is : " + str(global_vars.level)
+	$Control/Label.text = str(global_vars.level) + " !!"
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
