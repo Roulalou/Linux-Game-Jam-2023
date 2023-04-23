@@ -29,12 +29,6 @@ func _on_trolley_pressed():
 	get_tree().change_scene_to_file("res://scene/transition.tscn")
 
 
-func _on_random_pressed():
+func _on_multi_pressed():
 	global_vars.game = "random"
-	var next = randi() % 3
-	if next == 0: 
-		get_tree().change_scene_to_file("res://scene/douche.tscn")
-	if next == 1:
-		get_tree().change_scene_to_file("res://scene/bouquet.tscn")
-	if next == 2:
-		get_tree().change_scene_to_file("res://scene/trolley_level.tscn")
+	get_tree().change_scene_to_file("res://scene/transition.tscn")

@@ -45,13 +45,13 @@ offset_right = 1232.0
 offset_bottom = 692.0
 text = "Trolley Undilemma"
 
-[node name="Random" type="Button" parent="Control"]
+[node name="Multi" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 528.0
-offset_top = 428.0
-offset_right = 760.0
-offset_bottom = 528.0
-text = "Random"
+offset_left = 299.0
+offset_top = 267.0
+offset_right = 530.0
+offset_bottom = 395.0
+text = "Multi"
 
 [node name="Savetheday" type="Sprite2D" parent="."]
 position = Vector2(648, 216)
@@ -69,5 +69,4 @@ texture = ExtResource("3_b78ip")
 [connection signal="pressed" from="Control/douche" to="." method="_on_douche_pressed"]
 [connection signal="pressed" from="Control/samourai" to="." method="_on_samourai_pressed"]
 [connection signal="pressed" from="Control/trolley" to="." method="_on_trolley_pressed"]
-[connection signal="pressed" from="Control/Random" to="." method="_on_random_pressed"]
-[connection signal="pressed" from="Control/Random" to="." method="_on_douche_pressed"]
+[connection signal="pressed" from="Control/Multi" to="." method="_on_multi_pressed"]

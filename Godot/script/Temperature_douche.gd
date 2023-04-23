@@ -15,7 +15,7 @@ func _process(delta):
 
 
 func _on_timer_timeout():
-	$TDouche.value -= 6 + (global_vars.level * 1)
+	$TDouche.value -= 60 + (global_vars.level * 6)
 	$Time.value -= 8 + (global_vars.level * 0.5)
 	
 	if $Time.value <= 0:
@@ -23,7 +23,7 @@ func _on_timer_timeout():
 		get_tree().change_scene_to_file("res://scene/transition.tscn")
 	
 	# value not  between x and y : lose hp
-	if $TDouche.value < 700:
+	if $TDouche.value < 7000:
 		$SebLaverFroid.visible = true
 		$SebLaverChaud.visible = false
 		$HP.value -= 3
@@ -32,7 +32,7 @@ func _on_timer_timeout():
 			global_vars.lost = true
 			get_tree().change_scene_to_file("res://scene/transition.tscn")
 	
-	elif $TDouche.value >800:
+	elif $TDouche.value >8000:
 		$SebLaverFroid.visible = false
 		$SebLaverChaud.visible = true
 		$HP.value -= 3
@@ -46,4 +46,4 @@ func _on_timer_timeout():
 	
 func _input(event):
 	if event.is_action_pressed("doucheUP"):
-		$TDouche.value += 50
+		$TDouche.value += 500
